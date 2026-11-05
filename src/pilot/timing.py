@@ -10,8 +10,11 @@ class Word:
 
 def validate_words(words: list[Word]) -> None:
     if not words: raise ValueError("alignment returned no words")
+    for word in words:
+        if word.end < word.start:
+            raise ValueError("word alignment has negative duration")
     for a, b in zip(words, words[1:]):
-        if a.end < a.start or b.start < a.end:
+        if b.start < a.end:
             raise ValueError("non-monotonic/overlapping word alignment")
 
 def gaps(words: list[Word], threshold: float = .18) -> list[dict]:
