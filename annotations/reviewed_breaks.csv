@@ -1,0 +1,2 @@
+talk_id,after_word_index,label,reviewer,notes
+# Populate only after reviewing candidates.csv. Accepted rows become reference labels; blanks/comments are not labels.

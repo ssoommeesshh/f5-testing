@@ -1,0 +1,30 @@
+{
+  "schema_version": "1.0",
+  "purpose": "Evaluation pilot only. Timing is relative to this speaker's recording; it is not an objective delivery score.",
+  "primary_source": {
+    "dataset": "TED-LIUM Release 3 legacy test",
+    "talk_id": "DanBarber_2010",
+    "format": {"audio": "NIST SPHERE (.sph)", "transcript": "STM; segmented, time-stamped manual test transcript"},
+    "official_archive_url": "https://www.openslr.org/resources/51/TEDLIUM_release-3.tgz",
+    "expected_paths": {"audio": "TEDLIUM_release-3/legacy/test/sph/DanBarber_2010.sph", "transcript": "TEDLIUM_release-3/legacy/test/stm/DanBarber_2010.stm"},
+    "archive_sha256_from_torchaudio": "ad1e454d14d1ad550bc2564c462d87c7a7ec83d4dc2b9210f22ab4973b9eccdb",
+    "verified_on": "2026-11-05",
+    "verification_result": "HTTP HEAD returned 404. The official Release-3 distribution is a whole-corpus archive, not a talk-level download. This repository deliberately does not download it.",
+    "reuse_and_attribution": "TED-LIUM materials: TED Conferences LLC / LIUM; review the dataset README and TED terms before reuse. Cite Hernandez et al. (2018), TED-LIUM 3."
+  },
+  "explicit_fallback": {
+    "reason": "Primary official archive was unavailable at verification time and no reliable talk-level TED-LIUM download was found.",
+    "source_kind": "Official TED talk, not TED-LIUM; use only with --source ted_fallback and report this substitution.",
+    "talk_page": "https://www.ted.com/talks/dan_barber_how_i_fell_in_love_with_a_fish",
+    "transcript_page": "https://www.ted.com/talks/dan_barber_how_i_fell_in_love_with_a_fish/transcript?language=en",
+    "audio_fetch": "yt-dlp extracts runtime audio from the official TED page; it also fetches English captions where exposed. The script stops if captions are unavailable.",
+    "reuse_and_attribution": "© TED Conferences, LLC. TED talks are generally CC BY-NC-ND; confirm the page-specific terms before redistribution. Do not commit media."
+  },
+  "planned_windows_seconds": {
+    "reference": [60, 68],
+    "target_short": [180, 205],
+    "target_long": [180, 240],
+    "note": "Provisional windows are intentionally validated against fetched caption/STM segments before generation. The prepare command writes the exact selected text and rejects overlap."
+  },
+  "selection_status": "Needs runtime extraction/validation; no audio, captions, timings, or derived pause labels are committed."
+}
